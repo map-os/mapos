@@ -5,8 +5,8 @@
     <div class="row align-items-center justify-content-between mb-2">
 
         <div class="col col-sm-6 text-left">
-            <a class="btn btn-success" href="{{ route('admin.services.create') }}">
-                <i class="fa fa-plus"></i> {{ __('messages.create_service') }}
+            <a class="btn btn-success" href="{{ route('admin.warrantys.create') }}">
+                <i class="fa fa-plus"></i> {{ __('messages.create_warranty') }}
             </a>
         </div>
         <div class="col col-sm-4">
@@ -25,19 +25,21 @@
                 <thead class="thead-light">
                     <tr>
                         <th class="text-center">#</th>
-                        <th class="text-center">{{ __('messages.name') }}</th>
-                        <th class="text-center">{{ __('messages.description') }}</th>
-                        <th class="text-center">{{ __('messages.price') }}</th>
+                        <th class="text-center">{{ __('messages.date_warranty') }}</th>
+                        <th class="text-center">{{ __('messages.ref_warranty') }}</th>
+                        <th class="text-center">{{ __('messages.text_warranty') }}</th>
+                        <th class="text-center">{{ __('messages.user_id') }}</th>
                         <th class="text-center">{{ __('messages.actions') }}</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($services as $service)
+                    @forelse ($warrantys as $warranty)
                         <tr class="text-center">
-                            <td>{{ $service->getKey() }}</td>
-                            <td>{{ $service->name }}</td>
-                            <td>{{ $service->description }}</td>
-                            <td>{{ $service->price }}</td>
+                            <td>{{ $warranty->getKey() }}</td>
+                            <td>{{ date('d/m/Y', strtotime($warranty->date_warranty)) }}</td>
+                            <td>{{ $warranty->ref_warranty }}</td>
+                            <td>{{ $warranty->text_warranty }}</td>
+                            <td>{{ $warranty->user->name }}</td>
                             <td>
                                 <div class="btn-group"><button
                                         class="btn btn-link text-dark dropdown-toggle dropdown-toggle-split m-0 p-0"
@@ -47,13 +49,13 @@
                                         <span class="sr-only">__('messages.actions')</span></button>
                                     <div class="dropdown-menu">
                                         <a class="dropdown-item"
-                                            href="{{ route('admin.services.show', $service) }}"><span
+                                            href="{{ route('admin.warrantys.show', $warranty) }}"><span
                                                 class="fas fa-eye mr-2"></span>{{ __('messages.view') }}</a>
                                         <a class="dropdown-item"
-                                            href="{{ route('admin.services.edit', $service) }}"><span
+                                            href="{{ route('admin.warrantys.edit', $warranty) }}"><span
                                                 class="fas fa-edit mr-2"></span>{{ __('messages.edit') }}</a>
-                                        <a class="dropdown-item text-danger" wire:click="destroy({{ $service->id }})"
-                                            href="#"><span
+                                        <a class="dropdown-item text-danger"
+                                            wire:click="destroy({{ $warranty->id }})" href="#"><span
                                                 class="fas fa-trash-alt mr-2"></span>{{ __('messages.delete') }}</a>
                                     </div>
                                 </div>
@@ -69,7 +71,7 @@
             </table>
 
             <div class="d-flex justify-content-center mt-2">
-                {{ $services->links() }}
+                {{ $warrantys->links() }}
             </div>
 
         </div>
