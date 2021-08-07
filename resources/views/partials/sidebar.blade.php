@@ -1,6 +1,6 @@
-<nav id="sidebarMenu" class="sidebar d-md-block bg-primary text-white collapse" data-simplebar>
+<nav id="sidebarMenu" class="sidebar d-md-block bg-light collapse" data-simplebar>
     <div class="sidebar-inner pt-3">
-        <a href="{{ url('/admin/dashboard') }}" class="brand"><img src="{{ asset('img/logo.svg') }}"></a>
+        <a href="{{ url('/admin/dashboard') }}" class="brand"><img src="{{ asset('img/logo.png') }}"></a>
         <ul class="nav flex-column">
             <li class="nav-item {{ Request::segment(2) == 'dashboard' ? 'active' : '' }}"><a href="{{ route('admin.dashboard.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-tv"></span></span> <span>Dashboard</span></a></li>
             <li class="nav-item {{ Request::segment(2) == 'customers' ? 'active' : '' }}"><a href="{{ route('admin.customers.index') }}" class="nav-link"><span class="sidebar-icon"><span class="fas fa-star"></span></span> <span>{{ __('messages.customers') }}</span></a></li>

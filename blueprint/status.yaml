@@ -1,0 +1,35 @@
+models:
+  Models\Status:
+    name: string:150
+    color: string:15
+
+controllers:
+  Admin\Status:
+    index:
+      query: all
+      render: admin.statuses.index with:statuses
+
+    create:
+      render: admin.statuses.create with:service
+
+    store:
+      validate: name, email, password
+      save: service
+      fire: ServiceCreatedEvent with:service
+      redirect: admin.statuses.index
+
+    show:
+      render: admin.statuses.show with:service
+
+    edit:
+      render: admin.statuses.edit with:service
+
+    update:
+      validate: name, email, password
+      save: service
+      fire: ServiceUpdatedEvent with:service
+      redirect: admin.statuses.index
+
+    destroy:
+      delete: service
+      fire: ServiceDeletedEvent with:service
