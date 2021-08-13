@@ -46,6 +46,7 @@
                                     <form class="navbar-search form-inline" id="navbar-search-main">
                                         <div class="input-group input-group-merge search-bar"><span class="input-group-text" id="topbar-addon"><span class="fas fa-search"></span></span> <input type="text" class="form-control" id="topbarInputIconLeft" placeholder="{{ __('messages.search') }}" aria-label="Search" aria-describedby="topbar-addon"></div>
                                     </form>
+
                                 </div><!-- Navbar links -->
                                 <ul class="navbar-nav align-items-center">
 
@@ -57,10 +58,10 @@
                                             </div>
                                         </a>
                                         <div class="dropdown-menu dashboard-dropdown dropdown-menu-right mt-2">
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="far fa-user-circle"></span>My Profile</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-cog"></span>Settings</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-envelope-open-text"></span>Messages</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Support</a>
+                                            <a class="dropdown-item font-weight-bold" href="#"><span class="far fa-user-circle"></span>Meu Perfil</a>
+                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-cog"></span>Configurações</a>
+                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-envelope-open-text"></span>Mensagens</a>
+                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Suporte</a>
                                             <div role="separator" class="dropdown-divider"></div>
                                             <a class="dropdown-item font-weight-bold" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
 

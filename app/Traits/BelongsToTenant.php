@@ -5,7 +5,7 @@ namespace App\Traits;
 
 
 use App\Scopes\TenantScope;
-use App\Tenant;
+use App\Models\Tenant;
 
 trait BelongsToTenant
 {

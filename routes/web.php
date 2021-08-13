@@ -26,6 +26,7 @@ Auth::routes([
 Route::redirect('/', '/login');
 
 Route::get('/tenant', [TenantController::class, 'selectTenant'])->name('tenant');
+Route::get('/access/{id}', [TenantController::class, 'setTenant'])->name('tenant.access');
 
 Route::get('/logout', [LoginController::class, 'logout']);
 
@@ -35,6 +36,7 @@ Route::group([
     'namespace' => 'Admin',
     'middleware' => ['auth', 'tenant'],
 ], function () {
+
     // Dashboard
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 

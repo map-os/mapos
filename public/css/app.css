@@ -25465,6 +25465,19 @@ label {
   margin-bottom: 0.5rem;
 }
 
+@media (min-width: 768px) {
+  .tenant {
+    left: 35px;
+  }
+}
+
+.tenant {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  width: 190px;
+}
+
 /**
  * = Backgrounds
 */

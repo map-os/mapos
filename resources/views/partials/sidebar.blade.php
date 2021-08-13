@@ -27,6 +27,8 @@
                 </div>
             </li>
 
+            <li class="nav-item"><a href="{{ url('tenant') }}" class="btn btn-secondary d-flex align-items-center justify-content-center tenant"><span class="sidebar-icon d-inline-flex align-items-center justify-content-center"></span><span>{{ session()->get('tenant') }}</span></a></li>
+
         </ul>
     </div>
 </nav>

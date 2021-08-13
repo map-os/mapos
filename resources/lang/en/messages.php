@@ -26,7 +26,7 @@ return [
     'created_success' => 'Registro cadastrado com sucesso!',
     'deleted_fail' => 'Falha ao deletar registro!',
     'no_records' => 'Nenhum registro encontrado',
-    'incorret_paremeters' => 'Parâmetros incorretos',
+    'incorret_paremeters' => 'Incorret parameters',
 
     // Users CRUD
     'users' => 'Usuários',
