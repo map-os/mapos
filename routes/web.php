@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\TenantController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,27 +25,28 @@ Auth::routes([
 
 Route::redirect('/', '/login');
 
+Route::get('/tenant', [TenantController::class, 'selectTenant'])->name('tenant');
+
 Route::get('/logout', [LoginController::class, 'logout']);
 
 Route::group([
     'prefix' => 'admin',
     'as' => 'admin.',
     'namespace' => 'Admin',
-    'middleware' => 'auth',
+    'middleware' => ['auth', 'tenant'],
 ], function () {
     // Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])
-        ->name('dashboard.index');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
     // Customers
-    Route::resource('/customers', 'CustomerController');
+    Route::resource('/customers', CustomerController::class);
 
     // Products
-    Route::resource('/products', 'ProductController');
+    Route::resource('/products', ProductController::class);
 
     // Services
-    Route::resource('/services', 'ServiceController');
+    Route::resource('/services', ServiceController::class);
 
     // Users
-    Route::resource('/users', 'UserController');
+    Route::resource('/users', UserController::class);
 });

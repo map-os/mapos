@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Service;
+use App\Models\Tenant;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ServiceFactory extends Factory
+class TenantFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Service::class;
+    protected $model = Tenant::class;
 
     /**
      * Define the model's default state.
@@ -23,8 +23,7 @@ class ServiceFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
-            'description' => $this->faker->text,
-            'price' => $this->faker->randomFloat(2, 0, 99999999.99),
+            'email' => $this->faker->email,
         ];
     }
 }

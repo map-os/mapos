@@ -6,9 +6,13 @@ use App\Events\ProductCreatedEvent;
 use App\Events\ProductDeletedEvent;
 use App\Events\ProductUpdatedEvent;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\BelongsToTenant;
 
 class Product extends Model
 {
+
+    use BelongsToTenant;
+
     /**
      * The attributes that are mass assignable.
      *

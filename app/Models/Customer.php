@@ -6,9 +6,13 @@ use App\Events\CustomerCreatedEvent;
 use App\Events\CustomerDeletedEvent;
 use App\Events\CustomerUpdatedEvent;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\BelongsToTenant;
 
 class Customer extends Model
 {
+
+    use BelongsToTenant;
+
     /**
      * The attributes that are mass assignable.
      *

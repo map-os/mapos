@@ -1,24 +1,41 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
 use App\Models\Customer;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
 
-$factory->define(Customer::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'document_number' => $faker->word,
-        'phone_number' => $faker->phoneNumber,
-        'mobile_phone_number' => $faker->word,
-        'email' => $faker->safeEmail,
-        'postal_code' => $faker->postcode,
-        'street_number' => $faker->numberBetween(0, 1000),
-        'street_name' => $faker->streetAddress,
-        'neighborhood' => $faker->word,
-        'city' => $faker->city,
-        'state' => $faker->state,
-        'complement' => $faker->word,
-        'contact' => $faker->word,
-    ];
-});
+class CustomerFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Customer::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name,
+            'document_number' => $this->faker->word,
+            'phone_number' => $this->faker->phoneNumber,
+            'mobile_phone_number' => $this->faker->word,
+            'email' => $this->faker->safeEmail,
+            'postal_code' => $this->faker->postcode,
+            'street_number' => $this->faker->numberBetween(0, 1000),
+            'street_name' => $this->faker->streetAddress,
+            'neighborhood' => $this->faker->word,
+            'city' => $this->faker->city,
+            'state' => $this->faker->state,
+            'complement' => $this->faker->word,
+            'contact' => $this->faker->word,
+        ];
+    }
+
+}

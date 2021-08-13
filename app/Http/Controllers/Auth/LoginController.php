@@ -37,4 +37,14 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function redirectTo()
+    {
+        if (!session()->has('tenant_id')) {
+            return $this->redirectTo = route('tenant');
+        }
+
+        return $this->redirectTo = $this->redirectPath();
+    }
+
 }

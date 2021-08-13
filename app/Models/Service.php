@@ -6,9 +6,11 @@ use App\Events\ServiceCreatedEvent;
 use App\Events\ServiceDeletedEvent;
 use App\Events\ServiceUpdatedEvent;
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\BelongsToTenant;
 
 class Service extends Model
 {
+    use BelongsToTenant;
     /**
      * The attributes that are mass assignable.
      *
