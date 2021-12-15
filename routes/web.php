@@ -45,6 +45,9 @@ Route::group([
     // Services
     Route::resource('/services', 'ServiceController');
 
+    // Warrantys
+    Route::resource('/warrantys', 'WarrantyController');
+
     // Users
     Route::resource('/users', 'UserController');
 });

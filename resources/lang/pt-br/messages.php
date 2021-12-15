@@ -69,4 +69,14 @@ return [
     'purchase_price' => 'Preço de Compra',
     'unit' => 'Unidade',
     'minimum_quantity_in_stock' => 'Quantidade Mínima em Estoque',
+
+    //Warranty CRUD
+    'warrantys' => 'Garantias',
+    'edit_warranty' => 'Editar Garantia',
+    'create_warranty' => 'Criar Garantia',
+    'view_warranty' => 'Visualizar Garantia',
+    'date_warranty' => 'Data',
+    'ref_warranty' => 'Ref da Garantia',
+    'text_warranty' => 'Texto da Garantia',
+    'user_id' => 'Usuario',
 ];
