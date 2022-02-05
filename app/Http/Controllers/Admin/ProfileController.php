@@ -8,7 +8,6 @@ use Illuminate\Support\Facades\Hash;
 
 class ProfileController extends Controller
 {
-
     public function edit()
     {
         $user = auth()->user();
@@ -33,5 +32,4 @@ class ProfileController extends Controller
             ->route('admin.profile.edit')
             ->with(['alert-success' => 'Perfil editado com sucesso!']);
     }
-
 }
