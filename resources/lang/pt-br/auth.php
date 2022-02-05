@@ -19,6 +19,7 @@ return [
     'password' => 'Senha',
     'email' => 'E-mail',
     'signin' => 'Entrar',
+    'logout' => 'Sair',
     'forgot_password' => 'Esqueceu a senha?',
     'remember' => 'Lembrar-me',
     'reset' => 'Resetar Senha',

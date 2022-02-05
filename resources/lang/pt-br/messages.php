@@ -26,6 +26,7 @@ return [
     'created_success' => 'Registro cadastrado com sucesso!',
     'deleted_fail' => 'Falha ao deletar registro!',
     'no_records' => 'Nenhum registro encontrado',
+    'profile' => 'Perfil',
 
     // Users CRUD
     'users' => 'Usuários',
