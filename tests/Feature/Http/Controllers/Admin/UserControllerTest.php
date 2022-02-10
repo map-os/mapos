@@ -30,7 +30,7 @@ class UserControllerTest extends TestCase
 
         $response->assertOk();
         $response->assertViewIs('admin.users.index');
-        $response->assertViewHas('users');
+        $response->assertSeeLivewire('users.index');
     }
 
     /**
