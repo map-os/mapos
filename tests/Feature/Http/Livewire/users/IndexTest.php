@@ -3,7 +3,6 @@
 namespace Tests\Feature\Http\Livewire\Users;
 
 use App\Http\Livewire\Users\Index;
-use App\Models\Service;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;

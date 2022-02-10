@@ -32,5 +32,4 @@ class UserUpdateRequest extends FormRequest
             'password' => 'sometimes|string|confirmed|min:8|nullable',
         ];
     }
-
 }
