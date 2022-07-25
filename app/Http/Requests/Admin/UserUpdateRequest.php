@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests\Admin;
 
+use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 
 class UserUpdateRequest extends FormRequest
@@ -23,9 +24,11 @@ class UserUpdateRequest extends FormRequest
      */
     public function rules()
     {
+        $id = $this->user ? $this->user->id : auth()->user()->id;
+
         return [
             'name' => 'required|string|min:5',
-            'email' => 'required|string|email',
+            'email' => 'required|string|email|unique:users,email,'.$id.',id',
             'password' => 'sometimes|string|confirmed|min:8|nullable',
         ];
     }

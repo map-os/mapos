@@ -27,6 +27,10 @@ return [
     'deleted_fail' => 'Falha ao deletar registro!',
     'no_records' => 'Nenhum registro encontrado',
 
+    // Profile
+    'profile' => 'Perfil',
+    'edit_profile' => 'Editar Perfil',
+
     // Users CRUD
     'users' => 'Usuários',
     'edit_user' => 'Editar Usuário',

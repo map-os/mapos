@@ -52,17 +52,14 @@
                                     <li class="nav-item dropdown">
                                         <a class="nav-link pt-1 px-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <div class="media d-flex align-items-center">
-                                                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="{{ asset('img/profile.png') }}">
-                                                <div class="media-body ml-2 text-dark align-items-center d-none d-lg-block"><span class="mb-0 font-small font-weight-bold">Admin</span></div>
+                                                <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="https://ui-avatars.com/api/?name={{auth()->user()->name}}&color=random&background=random&bold=true">
+                                                <div class="media-body ml-2 text-dark align-items-center d-none d-lg-block"><span class="mb-0 font-small font-weight-bold">{{ auth()->user()->name }}</span></div>
                                             </div>
                                         </a>
                                         <div class="dropdown-menu dashboard-dropdown dropdown-menu-right mt-2">
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="far fa-user-circle"></span>My Profile</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-cog"></span>Settings</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-envelope-open-text"></span>Messages</a>
-                                            <a class="dropdown-item font-weight-bold" href="#"><span class="fas fa-user-shield"></span>Support</a>
+                                            <a class="dropdown-item font-weight-bold" href="{{ route('admin.profile.edit') }}"><span class="far fa-user-circle"></span>{{ __('messages.profile') }}</a>
                                             <div role="separator" class="dropdown-divider"></div>
-                                            <a class="dropdown-item font-weight-bold" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>Logout</a>
+                                            <a class="dropdown-item font-weight-bold" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="fas fa-sign-out-alt text-danger"></span>{{ __('auth.logout') }}</a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                                 {{ csrf_field() }}
