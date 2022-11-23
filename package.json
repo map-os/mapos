@@ -11,7 +11,7 @@
         "format": "prettier --write 'resources/**/*.{css,js,vue}' 'nova-components/**/*.{css,js,vue}'"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.12",
+        "browser-sync": "^2.27.10",
         "cross-env": "^7.0",
         "del": "4.1.1",
         "file-loader": "^6.1.0",
