@@ -8,31 +8,29 @@
     "packages": [
         {
             "name": "bepsvpt/secure-headers",
-            "version": "7.2.0",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bepsvpt/secure-headers.git",
-                "reference": "e02d80065aae06a66220693e9c321787657fb20b"
+                "reference": "639e99c72bdfe3d6f933f0a1e0abe1ca722e2e67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bepsvpt/secure-headers/zipball/e02d80065aae06a66220693e9c321787657fb20b",
-                "reference": "e02d80065aae06a66220693e9c321787657fb20b",
+                "url": "https://api.github.com/repos/bepsvpt/secure-headers/zipball/639e99c72bdfe3d6f933f0a1e0abe1ca722e2e67",
+                "reference": "639e99c72bdfe3d6f933f0a1e0abe1ca722e2e67",
                 "shasum": ""
             },
             "require": {
-                "illuminate/support": "~5.1 || ~6.0 || ~7.0 || ~8.0 || ~9.0",
                 "php": "^7.0 || ^8.0"
             },
             "require-dev": {
+                "ergebnis/composer-normalize": "~2.29",
                 "ext-json": "*",
                 "ext-xdebug": "*",
-                "orchestra/testbench": "~3.1 || ~4.0 || ~5.0 || ~6.0 || ~7.0"
-            },
-            "suggest": {
-                "friendsofphp/php-cs-fixer": "Coding style fixer",
-                "phpstan/phpstan": "Static analysis tool",
-                "phpunit/phpunit": "PHP unit testing framework"
+                "laravel/pint": "~1.4",
+                "orchestra/testbench": "~3.1 || ~4.18 || ~5.20 || ~6.25 || ~7.19 || ~8.0",
+                "phpstan/phpstan": "~1.9",
+                "phpunit/phpunit": "~5.7 || ~6.5 || ~7.5 || ~8.5 || ~9.5 || ~10.0"
             },
             "type": "library",
             "extra": {
@@ -76,7 +74,7 @@
             ],
             "support": {
                 "issues": "https://github.com/bepsvpt/secure-headers/issues",
-                "source": "https://github.com/bepsvpt/secure-headers/tree/7.2.0"
+                "source": "https://github.com/bepsvpt/secure-headers/tree/7.4.0"
             },
             "funding": [
                 {
@@ -84,7 +82,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-02-10T01:11:21+00:00"
+            "time": "2023-02-06T13:24:48+00:00"
         },
         {
             "name": "brick/math",
